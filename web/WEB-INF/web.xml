@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <context-param>
+        <param-name>company</param-name>
+        <param-value>Icarus</param-value>
+    </context-param>
+    <context-param>
+        <param-name>manager</param-name>
+        <param-value>yopy</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>InitParam</servlet-name>
+        <servlet-class>com.company.itbank.InitParam</servlet-class>
+
+        <init-param>
+            <param-name>tel</param-name>
+            <param-value>010-2939-3943</param-value>
+        </init-param>
+        <init-param>
+            <param-name>email</param-name>
+            <param-value>yopyzzang@gmail.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>commentBoard</servlet-name>
+        <servlet-class>com.company.itbank2.CommentBoard</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VisitInsert</servlet-name>
+        <servlet-class>bbs.VisitInsert</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VisitInsert</servlet-name>
+        <url-pattern>/visitInsert</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>VisitList</servlet-name>
+        <servlet-class>bbs.VisitList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VisitList</servlet-name>
+        <url-pattern>/visitList</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>commentBoard</servlet-name>
+        <url-pattern>/board</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InitParam</servlet-name>
+        <url-pattern>/init</url-pattern>
+    </servlet-mapping>
+</web-app>
